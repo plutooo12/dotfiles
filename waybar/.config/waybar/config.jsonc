@@ -1,40 +1,73 @@
 {
+  "reload_style_on_change": true,
+  "layer": "top",
   "position": "top",
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["hyprland/window"],
-  "modules-right": ["network", "pulseaudio", "battery", "clock"],
-  "clock": {
-    "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-  },
-  "battery": {
-    "states": {
-      "warning": 30,
-      "critical": 15
+  "height": 28,
+  "spacing": 0,
+
+  "modules-left":   ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right":  ["pulseaudio", "cpu", "battery", "custom/power"],
+
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "1": "1", "2": "2", "3": "3", "4": "4", "5": "5",
+      "active":  "󱓻",
+      "default": "·"
     },
-    "format": "<span size='13000' foreground='#a6e3a1'>{icon} </span> {capacity}%",
-    "format-warning": "<span size='13000' foreground='#B1E3AD'>{icon} </span> {capacity}%",
-    "format-critical": "<span size='13000' foreground='#E38C8F'>{icon} </span> {capacity}%",
-    "format-charging": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
-    "format-plugged": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
-    "format-alt": "<span size='13000' foreground='#B1E3AD'>{icon} </span> {time}",
-    "format-full": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
-    "format-icons": ["", "", "", "", ""],
-    "tooltip-format": "{time}"
+    "persistent-workspaces": {
+      "1": [], "2": [], "3": [], "4": [], "5": []
+    }
   },
-  "network": {
-    "format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>{essid}",
-    "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
-    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
+
+  "clock": {
+    "format":     "{:%a %I:%M %p}",
+    "format-alt": "{:%d %B %Y}",
+    "tooltip":    false
   },
+
   "pulseaudio": {
-      "format": "{icon}  {volume}%",
-      "format-muted": "",
-      "format-icons": {
-          "default": ["", "", " "]
-      },
-      "on-click": "pavucontrol"
+    "format":        "{icon}",
+    "format-muted":  "󰝟",
+    "tooltip-format": "Volume: {volume}%",
+    "scroll-step":   5,
+    "on-click":       "pamixer -t",
+    "on-click-right": "pavucontrol",
+    "format-icons": {
+      "headphone": "󰋋",
+      "headset":   "󰋎",
+      "default":   ["󰕿", "󰖀", "󰕾"]
+    }
+  },
+
+  "cpu": {
+    "interval":      5,
+    "format":        "󰍛",
+    "tooltip-format": "CPU: {usage}%",
+    "on-click":      "kitty --class kitty-btop -e btop"
+  },
+
+  "battery": {
+    "bat":             "BAT1",
+    "interval":        10,
+    "format":          "{icon}  {capacity}%",
+    "format-charging": "󰂄  {capacity}%",
+    "format-plugged":  "󰚥  {capacity}%",
+    "format-full":     "󰁹  {capacity}%",
+    "tooltip-format":  "{timeTo}\n{capacity}%",
+    "format-icons":    ["󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"],
+    "states": {
+      "warning":  20,
+      "critical": 10
+    }
+  },
+
+  "custom/power": {
+    "format":          "⏻",
+    "tooltip":         false,
+    "on-click":        "~/scripts/wofi-power.sh",
+    "on-click-right":  "systemctl poweroff"
   }
 }
