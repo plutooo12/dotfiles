@@ -1,0 +1,72 @@
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.notification-row {
+    outline: none;
+    margin: 4px;
+}
+
+.notification {
+    background: rgba(17, 17, 27, 0.95);
+    border: 1px solid rgba(203, 166, 247, 0.25);
+    border-radius: 14px;
+    padding: 12px;
+    color: #cdd6f4;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.notification:hover {
+    background: rgba(30, 30, 46, 0.98);
+    border-color: rgba(203, 166, 247, 0.4);
+}
+
+.notification-content {
+    padding: 4px 0;
+}
+
+.notification-default-action {
+    border-radius: 12px;
+}
+
+.summary {
+    color: #cdd6f4;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.body {
+    color: rgba(205, 214, 244, 0.75);
+    font-size: 12px;
+}
+
+.control-center {
+    background: rgba(17, 17, 27, 0.97);
+    border: 1px solid rgba(203, 166, 247, 0.2);
+    border-radius: 16px;
+    padding: 8px;
+    color: #cdd6f4;
+}
+
+.control-center-list {
+    background: transparent;
+}
+
+.notification-group-headers {
+    color: rgba(203, 166, 247, 0.8);
+    font-weight: bold;
+}
+
+.close-button {
+    background: rgba(243, 139, 168, 0.2);
+    color: #f38ba8;
+    border-radius: 50%;
+    padding: 2px;
+    border: none;
+}
+
+.close-button:hover {
+    background: rgba(243, 139, 168, 0.4);
+}

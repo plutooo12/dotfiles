@@ -12,7 +12,7 @@ window#waybar {
 
 /* ===== CENTER ISLAND ===== */
 .modules-center {
-    background: #202028;
+    background: rgba(15, 15, 20, 0.78);               /* #202028;*/
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 999px;
 
