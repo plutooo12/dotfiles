@@ -1,0 +1,29 @@
+base
+dkms  linux
+ffmpeg  libvdpau  sdl3  vulkan-icd-loader
+ffmpegthumbnailer  glib2  thunar
+firefox
+gettext  yazi
+grub
+gvfs
+hyprland  xdg-desktop-portal
+lib32-vulkan-icd-loader
+libblockdev-fs  udisks2
+libpulse  pipewire
+libva
+linux
+mpg123  pipewire  sdl3
+mpg123  sdl3
+None
+nvidia-utils
+pacman
+pipewire
+sdl3
+sdl3  vulkan-icd-loader
+starship
+thunar
+tumbler
+waypaper
+xdg-desktop-portal
+yay
+yazi

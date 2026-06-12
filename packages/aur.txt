@@ -1,0 +1,5 @@
+catppuccin-gtk-theme-mocha
+sddm-astronaut-theme
+swayosd-git
+waypaper
+yay

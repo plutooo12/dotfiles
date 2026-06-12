@@ -1,0 +1,5 @@
+[Default Applications]
+image/heif=viewnior.desktop
+
+[Added Associations]
+image/heif=viewnior.desktop;
