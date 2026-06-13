@@ -6,6 +6,7 @@ brightnessctl
 btop
 btrfs-progs
 cliphist
+cpupower
 efibootmgr
 ffmpegthumbnailer
 firefox
@@ -36,11 +37,14 @@ nvidia-open-dkms
 nvidia-settings
 nvidia-utils
 nwg-look
+pacman-contrib
 pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
 polkit-gnome
+prismlauncher
+reflector
 sddm
 sof-firmware
 starship
@@ -52,8 +56,9 @@ ttf-cascadia-code-nerd
 tumbler
 ufw
 viewnior
+virtualbox
+virtualbox-host-modules-arch
 vulkan-intel
-weston
 wireplumber
 wl-clipboard
 wlopm

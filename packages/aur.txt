@@ -1,4 +1,6 @@
 catppuccin-gtk-theme-mocha
+python-imageio-ffmpeg
+python-screeninfo
 sddm-astronaut-theme
 swayosd-git
 waypaper
